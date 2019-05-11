@@ -10,7 +10,10 @@
 </head>
 <body>
     <?php
-    include ('lib/products.php');
+    include ('lib/products.php'); //lỗi nhưng vẫn chạy tiếp các câu lệnh tiếp theo
+    //include_once('lib/products.php'); //kiểm tra tồn tại, rồi mới include
+    // require ('lib/products.php'); dừng lại hẳn
+    // require_once: tương tự
     ?>
 
      <div class="container">
@@ -19,10 +22,11 @@
         ?>
          <div class="product">
             <div class="image">
-                <img src="images/iphone-xs-max-gray-400x460.png">
+                <img src="<?=$link.$product['image']?>">
             </div>
             <div class="info">
-                <div class="name">Iphone XS Max</div>
+                <div class="name"><?= $product['name']?></div> 
+                <!-- Hoac: <?php echo $product['name']; ?> -->
                 <ul class="detail">
                     <li>Giảm ngay 1 triệu (đã trừ vào giá)</li>
                     <li>Giảm ngay 1 triệu (đã trừ vào giá)</li>
@@ -32,11 +36,13 @@
                 </ul>
             </div>
             <div class="product-bottom">
-                <p class="name">Iphone XS Max</p>
-                <p class="price">35000000 VND</p>
+                <p class="name"><?= $product['name']?></p>
+                <p class="price"><?=number_format($product['price'], 0, ',', '.')?> VNĐ</p>
+                <!-- number_format: định dạng số -->
             </div>
          </div>
-        <?php }?>
+        <?php }
+        ?>
         <!-- <div class="product">
             <div class="image">
                 <img src="images/iphone-xs-max-gray-400x460.png">
