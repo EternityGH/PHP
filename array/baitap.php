@@ -10,11 +10,34 @@
 </head>
 <body>
     <?php
-    // include ('lib/products.php');
+    include ('lib/products.php');
     ?>
 
-    <div class="container">
-        <div class="product">
+     <div class="container">
+        <?php 
+        foreach($arrProduct as $product){
+        ?>
+         <div class="product">
+            <div class="image">
+                <img src="images/iphone-xs-max-gray-400x460.png">
+            </div>
+            <div class="info">
+                <div class="name">Iphone XS Max</div>
+                <ul class="detail">
+                    <li>Giảm ngay 1 triệu (đã trừ vào giá)</li>
+                    <li>Giảm ngay 1 triệu (đã trừ vào giá)</li>
+                    <li class="promotion">Khuyến mãi: </li>
+                    <li>Đổi máy cũ lên đời iPhone </li>
+                    <li>Đổi máy cũ lên đời iPhone </li>
+                </ul>
+            </div>
+            <div class="product-bottom">
+                <p class="name">Iphone XS Max</p>
+                <p class="price">35000000 VND</p>
+            </div>
+         </div>
+        <?php }?>
+        <!-- <div class="product">
             <div class="image">
                 <img src="images/iphone-xs-max-gray-400x460.png">
             </div>
@@ -128,6 +151,6 @@
                 <p class="price">35000000 VND</p>
             </div>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>
