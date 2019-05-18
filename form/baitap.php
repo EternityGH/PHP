@@ -30,7 +30,7 @@
                 $snumB = $_GET['numB'];      
                 
             }       
-            if(isset($_GET["calc"])){
+            if(isset($_GET["submit"])){
                 $cOption = $_GET["calc"];
                 switch ($cOption) {
                     case "add":
